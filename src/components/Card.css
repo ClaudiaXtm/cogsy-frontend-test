@@ -38,10 +38,10 @@ video {
 
 .star-button-position {
     text-align: left;
+    margin-top: 5px !important;
 }
 
 .menu-position {
     text-align: right;
-    margin-top: 8px !important;
 }
 

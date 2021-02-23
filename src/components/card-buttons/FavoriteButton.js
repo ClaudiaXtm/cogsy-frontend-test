@@ -1,36 +1,26 @@
-import React, {Component} from 'react';
-import StarIcon from '@material-ui/icons/Star';
-import StarOutlineIcon from '@material-ui/icons/StarOutline';
-import IconButton from '@material-ui/core/IconButton';
+import React, {useState, useEffect} from 'react';
+import './FavoriteButton.css';
   
-class FavoriteButton extends Component {
-    // isFavorite state initialization
-    state = {
-        isFavorite: false
-    } 
-    // change isFavorite value
-    toggleFavorite = (state) => {
-        this.setState({
-            isFavorite: !this.state.isFavorite
-        })
-    };
+export default function FavoriteButton () {
+    const [isFavorite, setIsFavorite] = useState(false);
 
-    render() {
-        return (
-            <div>  
-                <IconButton  
-                    aria-label="more"
-                    aria-controls="long-menu"
-                    aria-haspopup="true"
-                    onClick={this.toggleFavorite}
-                >
-                    {/* display star icon according to isFavorite value */}
-                    {this.state.isFavorite ? ( <StarIcon />  ) : ( <StarOutlineIcon />  )}
-                </IconButton>
-            </div>
-        );
+    const favoriteHandler = () => {
+        setIsFavorite(current => !current)
     }
+    
+    //get the updated isFavorite state value
+    useEffect( () => [isFavorite]);
+
+    return (
+        <div>  
+            <button onClick={favoriteHandler} className="btn">
+              <span className={
+                isFavorite ? 'icon icon-filled-star' : 'icon icon-outlined-star'
+              }></span>
+            </button>
+        </div>
+    );
+    
 }
 
-export default FavoriteButton;
 
