@@ -1,0 +1,47 @@
+.card-container {
+    max-width: 320px;
+    overflow: hidden;
+    border: 1px solid #d2d7df;
+    border-radius: 5px;
+    margin-top: 32px;
+}
+
+.image-container img {
+    height: 210px;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+}
+
+video {
+    height: auto;
+    width: 100%;
+}
+
+.card-content {
+    text-align: left;
+    padding: 24px;
+}
+
+.card-title {
+    width: 250px;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+.truncate-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+
+.star-button-position {
+    text-align: left;
+}
+
+.menu-position {
+    text-align: right;
+    margin-top: 8px !important;
+}
+

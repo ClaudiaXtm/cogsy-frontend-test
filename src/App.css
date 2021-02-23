@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  padding: 32px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.large-font {
+  font-size: 24px;
+  line-height: 32px;
+  color:  #2A2941;
+}
+
+.medium-font {
+  font-size: 16px;
+  line-height: 24px;
+  color:  #2A2941;
+}
+
+.small-font {
+  font-size: 14px;
+  line-height: 22px;
+  color:  #2A2941;
+}
